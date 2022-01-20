@@ -47,3 +47,7 @@ After the dice has been rolled, the dot count can't become zero again.
 #### **maximumValue**
 
 - Returns the upper bound of the dice.
+
+## To check the test cases
+
+- go to 'diceTestCases.md'
