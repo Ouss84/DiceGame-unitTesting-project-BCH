@@ -23,5 +23,7 @@ module.exports = class Dice {
   get dots() {
     return this.dotCount;
   }
-  roll() {}
+  roll() {
+    this.dotCount = Math.ceil(Math.random()) * this.upperBound;
+  }
 };
