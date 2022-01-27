@@ -63,6 +63,7 @@ describe("Testing constractor", () => {
   describe("Test exceptions", () => {
     const testValues = [
       ["s", "Upper bound must be an integer"],
+      ["7", "Upper bound must be an integer"],
       [2.5, "Upper bound must be an integer"],
       [-4, "Upper bound too small"],
       [1, "Upper bound too small"],
@@ -105,5 +106,19 @@ describe("Test method roll", () => {
       expect(dice.dots).toBeGreaterThanOrEqual(1);
       expect(dice.dots).toBeLessThanOrEqual(upperBound);
     });
+  });
+});
+describe("Test method toString", () => {
+  let dice;
+  beforeEach(() => {
+    dice = new Dice();
+  });
+
+  test("dice not rolled yet", () => {
+    expect(dice.toString()).toBe("Not rolled yet");
+  });
+  test("dice rolled", () => {
+    dice.roll();
+    expect(dice.toString()).toBe(`${dice.dots}`);
   });
 });
