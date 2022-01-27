@@ -48,3 +48,8 @@ console.log(`result: ${coin.dots === 1 ? "heads" : "tails"}`);
 const diceArray = [new Dice(), new Dice(), new Dice()];
 
 diceArray.forEach((dice) => console.log(dice.toString()));
+diceArray.forEach((dice) => dice.roll());
+diceArray.forEach((dice) => console.log(dice.toString()));
+
+const result = diceArray.reduce((sum, dice) => sum + dice.dots, 0);
+console.log(`Sum of dotsis ${result}`);
